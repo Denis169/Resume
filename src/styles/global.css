@@ -160,12 +160,58 @@ select {
   color: #000000;
   word-wrap: break-word;
 }
+.contacts .contact__value:hover {
+  text-shadow: 1px 1px 10px #d00000;
+}
 
 .main {
+  display: flex;
   width: 100%;
   height: 80%;
   background-color: #2a1e1e;
   border-radius: 2rem;
+}
+
+.left {
+  width: 40%;
+  padding: 5rem 1rem 1rem 1rem;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.skill {
+  padding: 0.5rem;
+}
+.skill__circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 0.5rem solid #d00000;
+}
+.skill__circle svg {
+  width: 45px;
+  height: 45px;
+  fill: #e3e3e3;
+}
+.skill__rating {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+}
+.skill__rating .mark {
+  width: 0.7rem;
+  height: 0.7rem;
+  border: 3px solid #e3e3e3;
+  border-radius: 50%;
+}
+.skill__rating .mark__good {
+  background-color: #e3e3e3;
 }
 
 .resume {

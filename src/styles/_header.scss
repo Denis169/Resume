@@ -89,6 +89,9 @@
       text-decoration: none;
       color: $black;
       word-wrap: break-word;
+      &:hover {
+        text-shadow: 1px 1px 10px $red-background;
+      }
     }
   }
 }

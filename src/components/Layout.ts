@@ -1,4 +1,6 @@
-import {svg} from "./Svg";
+import { svg } from './Svg';
+import Skill from './Skill';
+import {skillSvg} from "./SkillSvg";
 
 class Layout {
   private readonly parentBlock: HTMLElement | null;
@@ -67,6 +69,31 @@ class Layout {
   mainSection() {
     const mainSection = document.createElement('section');
     mainSection.className = 'main';
+    mainSection.innerHTML = `
+      <div class="left">
+      <div class="skills" id="skills"></div>
+      </div>
+      <div class="right">
+      
+      </div>
+    `;
+
+    const skills: HTMLElement | null = mainSection.querySelector('#skills');
+
+    if (skills) {
+      new Skill(skillSvg.jsSvg(), 4).appendTo(skills);
+      new Skill(skillSvg.reactSvg(), 4).appendTo(skills);
+      new Skill(skillSvg.htmlSvg(), 4).appendTo(skills);
+      new Skill(skillSvg.cssSvg(), 4).appendTo(skills);
+      new Skill(skillSvg.sassSvg(), 4).appendTo(skills);
+      new Skill(skillSvg.githubSvg(), 4).appendTo(skills);
+      new Skill(skillSvg.tsSvg(), 3).appendTo(skills);
+      new Skill(skillSvg.webpackSvg(), 4).appendTo(skills);
+      new Skill(skillSvg.reduxSvg(), 4).appendTo(skills);
+      new Skill(skillSvg.figmaSvg(), 3).appendTo(skills);
+      new Skill(skillSvg.nodejsSvg(), 2).appendTo(skills);
+    }
+
     return mainSection;
   }
 }

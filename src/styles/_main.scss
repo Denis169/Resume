@@ -1,8 +1,56 @@
 @import "varibles";
 
 .main {
+  display: flex;
   width: 100%;
   height: 80%;
   background-color: $black-background;
   border-radius: 2rem;
+}
+
+.left {
+  width: 40%;
+  padding: 5rem 1rem 1rem 1rem;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.skill {
+  padding: 0.5rem;
+
+  &__circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 0.5rem solid $red-background;
+    & svg {
+      width: 45px;
+      height: 45px;
+      fill: $grey-background;
+    }
+  }
+
+  &__rating {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.5rem;
+
+    .mark {
+      width: 0.7rem;
+      height: 0.7rem;
+      border: 3px solid $grey-background;
+      border-radius: 50%;
+
+      &__good {
+        background-color: $grey-background;
+      }
+    }
+  }
+
 }
