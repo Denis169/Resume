@@ -178,8 +178,8 @@ select {
 }
 
 .left {
-  width: 40%;
-  padding: 4rem 1rem 1rem 2rem;
+  width: 45%;
+  padding: 6rem 1rem 1rem 2rem;
   text-align: center;
 }
 
@@ -230,7 +230,7 @@ select {
   padding: 0.2rem 2rem;
   border-radius: 1rem;
   background-color: #d00000;
-  margin: 2rem auto;
+  margin: 1.5rem auto;
 }
 .subtitle__text {
   font-size: 1.2rem;
@@ -251,7 +251,7 @@ select {
   height: 1rem;
   background-color: #d00000;
   border-radius: 50%;
-  left: 115px;
+  left: 150px;
 }
 .course__ear {
   font-size: 1.5rem;
@@ -260,7 +260,7 @@ select {
 }
 .course__description {
   width: 300px;
-  padding: 0 0 4rem 3rem;
+  padding: 0 0 2.8rem 3rem;
   border-left: 2px solid #7a7a7a;
 }
 .course__title {
@@ -287,7 +287,7 @@ select {
   width: 670px;
   padding: 2rem;
   top: -26px;
-  left: 67px;
+  left: 31px;
   background-color: #d00000;
   text-align: left;
 }
@@ -313,8 +313,8 @@ select {
 .work {
   display: flex;
   position: relative;
-  padding: 1rem 2rem;
-  margin: 0 0 2rem 0;
+  padding: 1rem 1.2rem;
+  margin: 0 0 1rem 0;
   justify-content: space-between;
   background-color: #483838;
   border-radius: 3rem;
@@ -337,6 +337,21 @@ select {
 .work__name {
   font-size: 1.2rem;
   color: #7a7a7a;
+}
+
+.myChart {
+  margin: 0 auto;
+  width: 500px;
+  height: 500px;
+}
+
+.languages {
+  text-align: left;
+}
+.languages__item {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #e3e3e3;
 }
 
 .resume {

@@ -14,7 +14,7 @@
   width: 670px;
   padding: 2rem;
   top: -26px;
-  left: 67px;
+  left: 31px;
   background-color: $red-background;
   text-align: left;
 
@@ -42,8 +42,8 @@
 .work {
   display: flex;
   position: relative;
-  padding: 1rem 2rem;
-  margin: 0 0 2rem 0;
+  padding: 1rem 1.2rem;
+  margin: 0 0 1rem 0;
   justify-content: space-between;
   background-color: $black-background-opacity;
   border-radius: 3rem;
@@ -70,4 +70,10 @@
     font-size: 1.2rem;
     color: $grey-font;
   }
+}
+
+.myChart {
+  margin: 0 auto;
+  width: 500px;
+  height: 500px;
 }

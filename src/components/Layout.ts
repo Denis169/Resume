@@ -2,6 +2,9 @@ import { svg } from './Svg';
 import Skill from './Skill';
 import { skillSvg } from './SkillSvg';
 import Subtitle from './Subtitle';
+import { config } from './Chart';
+import { ChartItem } from 'chart.js';
+import Chart from 'chart.js/auto';
 
 class Layout {
   private readonly parentBlock: HTMLElement | null;
@@ -103,12 +106,19 @@ class Layout {
     if (left) {
       new Subtitle('EDUCATION').appendTo(left);
       left.append(this.education());
+      new Subtitle('LANGUAGES').appendTo(left);
+      left.append(this.languages());
     }
 
     if (right) {
       right.append(this.aboutMe());
       new Subtitle('EXPERIENCE').appendTo(right);
       right.append(this.experience());
+      new Subtitle('SOFT SKILLS').appendTo(right);
+      right.append(this.myChart());
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      // @ts-ignore
+      const myChart = new Chart(right.querySelector('#myChart') as ChartItem, config);
     }
 
     return mainSection;
@@ -204,6 +214,27 @@ class Layout {
     `;
 
     return experience;
+  }
+
+  myChart() {
+    const chart = document.createElement('div');
+    chart.className = 'myChart';
+    chart.innerHTML = `
+      <canvas id="myChart"></canvas>
+    `;
+
+    return chart;
+  }
+
+  languages() {
+    const languages = document.createElement('div');
+    languages.className = 'languages';
+    languages.innerHTML = `
+      <p class="languages__item">English - A2</p>
+      <p class="languages__item">Russian - native speaker</p>
+    `;
+
+    return languages;
   }
 }
 
