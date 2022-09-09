@@ -80,13 +80,14 @@ select {
 .header {
   display: flex;
   justify-content: space-around;
+  margin-bottom: 3rem;
 }
 
 .photo {
   position: relative;
   overflow: hidden;
   left: 4%;
-  top: 50px;
+  top: 80px;
   width: 300px;
   height: 300px;
   border: 0.8rem solid #d00000;
@@ -107,7 +108,8 @@ select {
 }
 
 .name {
-  width: 200px;
+  width: 250px;
+  margin-top: 6rem;
 }
 .name__name {
   font-family: "Roboto", sans-serif;
@@ -130,34 +132,37 @@ select {
   font-size: 1.2rem;
   letter-spacing: 0.8rem;
   line-height: 2.3rem;
-  color: #ababab;
-  border-top: 2px solid #ababab;
+  color: #7a7a7a;
+  border-top: 2px solid #7a7a7a;
 }
 
 .contacts {
   padding-left: 2rem;
-  border-left: 2px solid #ababab;
+  border-left: 2px solid #7a7a7a;
 }
 .contacts .contact {
   display: flex;
   margin-top: 1rem;
 }
 .contacts .contact__svg {
-  width: 20px;
-  height: 20px;
+  width: 40px;
+  height: 40px;
   fill: #d00000;
 }
 .contacts .contact__description {
   padding-left: 1.5rem;
-  max-width: 200px;
+  max-width: 230px;
 }
 .contacts .contact__header {
   height: 1rem;
   line-height: 1rem;
 }
 .contacts .contact__value {
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  margin-top: 5px;
   text-decoration: none;
-  color: #000000;
+  color: #505050;
   word-wrap: break-word;
 }
 .contacts .contact__value:hover {
@@ -167,19 +172,22 @@ select {
 .main {
   display: flex;
   width: 100%;
-  height: 80%;
+  height: 77%;
   background-color: #2a1e1e;
   border-radius: 2rem;
 }
 
 .left {
   width: 40%;
-  padding: 5rem 1rem 1rem 1rem;
+  padding: 4rem 1rem 1rem 2rem;
+  text-align: center;
 }
 
 .skills {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
+  gap: 1rem;
 }
 
 .skill {
@@ -199,6 +207,9 @@ select {
   height: 45px;
   fill: #e3e3e3;
 }
+.skill__circle svg path {
+  fill: #e3e3e3;
+}
 .skill__rating {
   display: flex;
   justify-content: space-between;
@@ -212,6 +223,120 @@ select {
 }
 .skill__rating .mark__good {
   background-color: #e3e3e3;
+}
+
+.subtitle {
+  display: inline-block;
+  padding: 0.2rem 2rem;
+  border-radius: 1rem;
+  background-color: #d00000;
+  margin: 2rem auto;
+}
+.subtitle__text {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #e3e3e3;
+}
+
+.course {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+.course:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  background-color: #d00000;
+  border-radius: 50%;
+  left: 115px;
+}
+.course__ear {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #e3e3e3;
+}
+.course__description {
+  width: 300px;
+  padding: 0 0 4rem 3rem;
+  border-left: 2px solid #7a7a7a;
+}
+.course__title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #e3e3e3;
+}
+.course__name {
+  font-size: 1.2rem;
+  color: #7a7a7a;
+}
+
+.right {
+  position: relative;
+  width: 60%;
+  border-left: 2px solid #7a7a7a;
+  text-align: center;
+  padding-top: 15rem;
+}
+
+.about {
+  position: absolute;
+  border-radius: 4rem 0 0 4rem;
+  width: 670px;
+  padding: 2rem;
+  top: -26px;
+  left: 67px;
+  background-color: #d00000;
+  text-align: left;
+}
+.about__header {
+  display: inline-block;
+  padding: 0.1rem 4rem;
+  background-color: #2a1e1e;
+  border-radius: 1rem;
+  color: #e3e3e3;
+}
+.about__text {
+  padding-top: 2rem;
+  letter-spacing: 0.1rem;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #e3e3e3;
+}
+
+.experience {
+  padding: 0 5rem;
+}
+
+.work {
+  display: flex;
+  position: relative;
+  padding: 1rem 2rem;
+  margin: 0 0 2rem 0;
+  justify-content: space-between;
+  background-color: #483838;
+  border-radius: 3rem;
+  border: 2px solid #d00000;
+}
+.work__ear {
+  text-align: left;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #e3e3e3;
+}
+.work__description {
+  width: 300px;
+}
+.work__title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #e3e3e3;
+}
+.work__name {
+  font-size: 1.2rem;
+  color: #7a7a7a;
 }
 
 .resume {

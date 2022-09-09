@@ -1,6 +1,7 @@
 import { svg } from './Svg';
 import Skill from './Skill';
-import {skillSvg} from "./SkillSvg";
+import { skillSvg } from './SkillSvg';
+import Subtitle from './Subtitle';
 
 class Layout {
   private readonly parentBlock: HTMLElement | null;
@@ -44,14 +45,14 @@ class Layout {
           ${svg.phoneSvg()}
           <div class="contact__description">
             <h2 class="contact__header">Phone:</h2>
-            <a class="contact__value" href="tel: +375296125038">+375 (29) 6125038</a>
+            <a class="contact__value" href="tel: +375296125038">+375 (29) 612-50-38</a>
           </div>
         </div>
         <div class="contact">
           ${svg.linkedInSvg()}
           <div class="contact__description">
             <h2 class="contact__header">LinkedIn:</h2>
-            <a class="contact__value" href="https://www.linkedin.com/in/dzianis-lahimakhau-559083212/">https://www.linkedin.com/in/dzianis-lahimakhau-559083212/</a>
+            <a class="contact__value" href="https://www.linkedin.com/in/dzianis-lahimakhau-559083212/">My profile</a>
           </div>
         </div>
         <div class="contact">
@@ -70,13 +71,18 @@ class Layout {
     const mainSection = document.createElement('section');
     mainSection.className = 'main';
     mainSection.innerHTML = `
-      <div class="left">
-      <div class="skills" id="skills"></div>
+      <div class="left" id="main-left">
+        <div class="skills" id="skills"></div>
       </div>
-      <div class="right">
-      
-      </div>
+      <div class="right" id="main-right"></div>
     `;
+
+    const left: HTMLElement | null = mainSection.querySelector('#main-left');
+    const right: HTMLElement | null = mainSection.querySelector('#main-right');
+
+    if (left) {
+      new Subtitle('MY SKILLS').prependTo(left);
+    }
 
     const skills: HTMLElement | null = mainSection.querySelector('#skills');
 
@@ -94,7 +100,110 @@ class Layout {
       new Skill(skillSvg.nodejsSvg(), 2).appendTo(skills);
     }
 
+    if (left) {
+      new Subtitle('EDUCATION').appendTo(left);
+      left.append(this.education());
+    }
+
+    if (right) {
+      right.append(this.aboutMe());
+      new Subtitle('EXPERIENCE').appendTo(right);
+      right.append(this.experience());
+    }
+
     return mainSection;
+  }
+
+  education() {
+    const education = document.createElement('div');
+    education.className = 'education';
+    education.innerHTML = `
+      <div class="course">
+        <div class="course__ears">
+          <p class="course__ear">2022</p>
+          <p class="course__ear">2022</p>
+        </div>
+        <div class="course__description">
+          <p class="course__title">RS School</p>
+          <p class="course__name">JS / FRONT-END</p>
+        </div>
+      </div>
+      <div class="course">
+        <div class="course__ears">
+          <p class="course__ear">2021</p>
+          <p class="course__ear">2022</p>
+        </div>
+        <div class="course__description">
+          <p class="course__title">INTELLECT FOX</p>
+          <p class="course__name">Frontend developer</p>
+        </div>
+      </div>
+      <div class="course">
+        <div class="course__ears">
+          <p class="course__ear">2006</p>
+          <p class="course__ear">2011</p>
+        </div>
+        <div class="course__description">
+          <p class="course__title">Belarusian National Technical University</p>
+          <p class="course__name">Organization of transportation and management of road and city transport</p>
+        </div>
+      </div>
+    `;
+
+    return education;
+  }
+
+  aboutMe() {
+    const aboutMe = document.createElement('div');
+    aboutMe.className = 'about';
+    aboutMe.innerHTML = `
+      <h2 class="about__header">ABOUT ME</h2>
+      <p class="about__text">
+        Extremely motivated to constantly develop personal skills and grow professionally.
+        Good logical thinking. Improved soft skills. I'm on fire with frontend development. 
+        I am open for job offers.
+      </p>
+    `;
+    return aboutMe;
+  }
+
+  experience() {
+    const experience = document.createElement('div');
+    experience.className = 'experience';
+    experience.innerHTML = `
+      <div class="work">
+        <div class="work__ears">
+          <p class="work__ear">2022 February</p>
+          <p class="work__ear">Till now</p>
+        </div>
+        <div class="work__description">
+          <p class="work__title">Finwin Technologies</p>
+          <p class="work__name">Frontend developer</p>
+        </div>
+      </div>
+      <div class="work">
+        <div class="work__ears">
+          <p class="work__ear">2014 July</p>
+          <p class="work__ear">2022 January</p>
+        </div>
+        <div class="work__description">
+          <p class="work__title">BelFlagman</p>
+          <p class="work__name">Head of Sales department</p>
+        </div>
+      </div>
+      <div class="work">
+        <div class="work__ears">
+          <p class="work__ear">2011 August</p>
+          <p class="work__ear">2014 July</p>
+        </div>
+        <div class="work__description">
+          <p class="work__title">BelFlagman</p>
+          <p class="work__name">Sales manager</p>
+        </div>
+      </div>
+    `;
+
+    return experience;
   }
 }
 
