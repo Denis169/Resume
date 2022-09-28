@@ -119,6 +119,7 @@ class Layout {
       // eslint-disable-next-line @typescript-eslint/ban-ts-comment
       // @ts-ignore
       const myChart = new Chart(right.querySelector('#myChart') as ChartItem, config);
+      Chart.defaults.color = '#d7d7d7';
     }
 
     return mainSection;
@@ -128,24 +129,35 @@ class Layout {
     const education = document.createElement('div');
     education.className = 'education';
     education.innerHTML = `
+
       <div class="course">
         <div class="course__ears">
-          <p class="course__ear">2022</p>
-          <p class="course__ear">2022</p>
+          <p class="course__ear">May 2022</p>
+          <p class="course__ear">September 2022</p>
         </div>
         <div class="course__description">
           <p class="course__title">RS School</p>
           <p class="course__name">JS / FRONT-END</p>
         </div>
       </div>
+      
       <div class="course">
         <div class="course__ears">
-          <p class="course__ear">2021</p>
-          <p class="course__ear">2022</p>
+          <p class="course__ear">May 2021</p>
+          <p class="course__ear">January 2022</p>
         </div>
         <div class="course__description">
           <p class="course__title">INTELLECT FOX</p>
           <p class="course__name">Frontend developer</p>
+        </div>
+      </div>
+      <div class="course">
+        <div class="course__ears">
+          <p class="course__ear">March 2021</p>
+        </div>
+        <div class="course__description">
+          <p class="course__title">IT-ACADEMY</p>
+          <p class="course__name">Computer Science</p>
         </div>
       </div>
       <div class="course">
@@ -230,7 +242,7 @@ class Layout {
     const languages = document.createElement('div');
     languages.className = 'languages';
     languages.innerHTML = `
-      <p class="languages__item">English - A2</p>
+      <p class="languages__item">English - A2-B1</p>
       <p class="languages__item">Russian - native speaker</p>
     `;
 

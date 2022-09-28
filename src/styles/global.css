@@ -99,10 +99,10 @@ select {
   position: absolute;
   width: 150%;
   height: 150%;
-  top: -17%;
-  left: -17%;
+  top: -27%;
+  left: -27%;
   z-index: -1;
-  background: url("../assets/image/84120857.png") no-repeat;
+  background: url("../assets/image/фото1.png") no-repeat;
   background-size: cover;
   transform: rotate(-45deg);
 }
@@ -253,14 +253,17 @@ select {
   border-radius: 50%;
   left: 150px;
 }
+.course__ears {
+  text-align: left;
+}
 .course__ear {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: bold;
   color: #e3e3e3;
 }
 .course__description {
   width: 300px;
-  padding: 0 0 2.8rem 3rem;
+  padding: 0 0 1.7rem 3rem;
   border-left: 2px solid #7a7a7a;
 }
 .course__title {

@@ -25,7 +25,8 @@ const data = {
         'rgb(213,102,102)',
         'rgb(197,142,142)',
       ],
-      borderColor: [`rgb(176, 176, 176)`],
+      borderColor: [`rgb(225, 225, 225)`],
+      color: ['#666'],
     },
   ],
 };
@@ -49,6 +50,7 @@ export const config = {
         labels: {
           // This more specific font property overrides the global property
           font: {
+            color: [`rgb(225, 225, 225)`],
             size: 15,
           },
         },
