@@ -242,7 +242,8 @@ class Layout {
     const languages = document.createElement('div');
     languages.className = 'languages';
     languages.innerHTML = `
-      <p class="languages__item">English - A2-B1</p>
+      <p class="languages__item">English - B1</p>
+      <p class="languages__item">Belarusian - native speaker</p>
       <p class="languages__item">Russian - native speaker</p>
     `;
 
