@@ -1,0 +1,49 @@
+@import "varibles";
+
+.education {
+
+}
+
+.course {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 1rem;
+    height: 1rem;
+    background-color: $red-background;
+    border-radius: 50%;
+    left: 150px;
+  }
+
+  &__ears {
+    text-align: left;
+  }
+
+  &__ear {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: $grey-background;
+  }
+
+  &__description {
+    width: 300px;
+    padding: 0 0 1.7rem 3rem;
+    border-left: 2px solid $grey-font;
+  }
+
+  &__title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: $grey-background;
+  }
+
+  &__name {
+    font-size: 1.2rem;
+    color: $grey-font;
+  }
+}

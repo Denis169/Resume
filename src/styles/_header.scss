@@ -1,0 +1,102 @@
+@import "varibles";
+
+.header {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 3rem;
+}
+
+.photo{
+  position: relative;
+  overflow: hidden;
+  left: 4%;
+  top: 80px;
+  width: 300px;
+  height: 300px;
+  border: 0.8rem solid $red-background;
+  border-radius: 2rem;
+  transform: rotate(45deg);
+
+  &:before{
+    content: '';
+    position: absolute;
+    width: 150%;
+    height: 150%;
+    top: -27%;
+    left: -27%;
+    z-index: -1;
+    background: url("../assets/image/фото1.png") no-repeat;
+    background-size: cover;
+    transform: rotate(-45deg);
+  }
+}
+
+.name {
+  width: 250px;
+  margin-top: 6rem;
+
+  &__name {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    height: 2.1rem;
+    line-height: 2.1rem;
+    font-size: 2rem;
+  }
+
+  &__surname {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 2.2rem;
+    line-height: 2.3rem;
+    color: $red-background;
+  }
+
+  &__profession {
+    font-family: 'Roboto', sans-serif;
+    padding-top: 2rem;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    letter-spacing: 0.8rem;
+    line-height: 2.3rem;
+    color: $grey-font;
+    border-top: 2px solid $grey-font;
+  }
+}
+
+.contacts {
+  padding-left: 2rem;
+  border-left: 2px solid $grey-font;
+
+  .contact {
+    display: flex;
+    margin-top: 1rem;
+
+    &__svg {
+      width: 40px;
+      height: 40px;
+      fill: $red-background;
+    }
+
+    &__description {
+      padding-left: 1.5rem;
+      max-width: 230px;
+    }
+
+    &__header {
+      height: 1rem;
+      line-height: 1rem;
+    }
+
+    &__value {
+      font-family: "Roboto", sans-serif;
+      font-weight: bold;
+      margin-top: 5px;
+      text-decoration: none;
+      color: $grey-font-two;
+      word-wrap: break-word;
+      &:hover {
+        text-shadow: 1px 1px 10px $red-background;
+      }
+    }
+  }
+}

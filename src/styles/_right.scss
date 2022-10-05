@@ -1,0 +1,79 @@
+@import "varibles";
+
+.right {
+  position: relative;
+  width: 60%;
+  border-left: 2px solid $grey-font;
+  text-align: center;
+  padding-top: 15rem;
+}
+
+.about {
+  position: absolute;
+  border-radius: 4rem 0 0 4rem;
+  width: 670px;
+  padding: 2rem;
+  top: -26px;
+  left: 31px;
+  background-color: $red-background;
+  text-align: left;
+
+  &__header {
+    display: inline-block;
+    padding: 0.1rem 4rem;
+    background-color: $black-background;
+    border-radius: 1rem;
+    color: $grey-background;
+  }
+
+  &__text {
+    padding-top: 2rem;
+    letter-spacing: 0.1rem;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: $grey-background;
+  }
+}
+
+.experience {
+  padding: 0 5rem;
+}
+
+.work {
+  display: flex;
+  position: relative;
+  padding: 1rem 1.2rem;
+  margin: 0 0 1rem 0;
+  justify-content: space-between;
+  background-color: $black-background-opacity;
+  border-radius: 3rem;
+  border: 2px solid $red-background;
+
+  &__ear {
+    text-align: left;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: $grey-background;
+  }
+
+  &__description {
+    width: 300px;
+  }
+
+  &__title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: $grey-background;
+  }
+
+  &__name {
+    font-size: 1.2rem;
+    color: $grey-font;
+  }
+}
+
+.myChart {
+  margin: 0 auto;
+  width: 500px;
+  height: 500px;
+}
