@@ -29,45 +29,49 @@
   &__text {
     padding-top: 2rem;
     letter-spacing: 0.1rem;
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     font-weight: bold;
     color: $grey-background;
   }
 }
 
 .experience {
-  padding: 0 5rem;
+  padding: 0 1.8rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .work {
   display: flex;
+  width: 300px;
   position: relative;
-  padding: 1rem 1.2rem;
-  margin: 0 0 1rem 0;
+  padding: 0.7rem 0.9rem;
+  margin: 0 0 0.5rem 0;
   justify-content: space-between;
   background-color: $black-background-opacity;
-  border-radius: 3rem;
+  border-radius: 2rem;
   border: 2px solid $red-background;
 
   &__ear {
     text-align: left;
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-weight: bold;
     color: $grey-background;
   }
 
   &__description {
-    width: 300px;
+    width: 150px;
   }
 
   &__title {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: bold;
     color: $grey-background;
   }
 
   &__name {
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: $grey-font;
   }
 }

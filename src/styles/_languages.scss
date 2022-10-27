@@ -1,7 +1,9 @@
 @import "varibles";
 
 .languages {
-  text-align: left;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
   &__item {
     font-size: 1.5rem;
     font-weight: bold;
